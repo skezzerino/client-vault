@@ -22,7 +22,7 @@ services:
     restart: always
     volumes:
       - $HOME/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - $HOME/nginx/certs:/etc/nginx/conf.d/certs
+      - $HOME/ca/cert:/etc/nginx/conf.d/certs
     ports:
       - "80:80"
       - "443:443"
