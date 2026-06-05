@@ -7,9 +7,9 @@ services:
       VAULT_ADDR: http://$VAULT_NAME.$DOMAIN:8200
     restart: always
     volumes:
-      - $VAULT_HOME/vault/file:/vault/file
-      - $VAULT_HOME/vault/config:/vault/config
-      - $VAULT_HOME/vault/logs:/vault/logs
+      - $VAULT_HOME/file:/vault/file
+      - $VAULT_HOME/config:/vault/config
+      - $VAULT_HOME/logs:/vault/logs
     cap_add:
       - IPC_LOCK
     entrypoint: vault server -config=/vault/config/vault.json
@@ -21,7 +21,7 @@ services:
     image: nginx
     restart: always
     volumes:
-      - $NGINX_HOME/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - $NGINX_HOME/nginx.conf:/etc/nginx/nginx.conf
       - $CA_HOME/cert:/etc/nginx/conf.d/certs
     ports:
       - "80:80"
