@@ -1,7 +1,7 @@
 # client vault envs
 export DOMAIN=szuev-learn.vm.lab.itkey.com
 export VAULT_NAME=vault
-export VAULT_HOME=$HOME/vault
-export NGINX_HOME=$HOME/nginx
-export CA_HOME=$HOME/ca
+export VAULT_HOME=$HOME/client-vault/vault
+export NGINX_HOME=$HOME/client-vault/nginx
+export CA_HOME=$HOME/client-vault/ca
 export CA_IP=192.168.0.55
